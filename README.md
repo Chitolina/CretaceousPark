@@ -728,15 +728,6 @@ plt.plot()
 ##### Temos muitos períodos similares que divergem em relação a "alguns" milhões de anos (e.g. Early Cretaceous 121-99 million years ago - Early Cretaceous 127-121 million years ago).   
 ##### * Talvez possamos agrupar alguns espaços de tempo para facilitar a análise.
 
-
-```python
-df.head(2) #A informação de anos junto dos períodos acaba criando muitos grupos diferentes
-```
-
-![jpg](/imagens/4.jpg)
-
-
-
 Clusterizando os períodos em Early, Mid e Late, sem a exatidão dos anos.  
 Chamei o método str.split para pegar o que havia antes do 2º espaço e colocar em uma nova coluna.
 
