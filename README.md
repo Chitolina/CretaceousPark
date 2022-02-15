@@ -461,23 +461,17 @@ sns.swarmplot(x='type',
               y='length', 
               data=df, 
               hue='porte', 
-              split=True, #separando pelo hue
+              split=True, 
               palette="Set1",
               alpha=.8, s=10,linewidth=1.0)
 
-sns.despine(offset=10, trim=True) #estilizando os eixos
- 
-# Ajustando o tamanho do y
+# deveria ter criado uma função para trazer isso com apenas poucos códigos       
+sns.despine(offset=10, trim=True)
 plt.ylim(-1, 40)
- 
-# Ajustando o tamanho dos dados de cada eixo
-
 plt.xlabel("Tipo: Subordem", fontsize=11, labelpad=10)
 plt.ylabel("Porte: comprimento (metros)", fontsize=11, labelpad=10)
 plt.xticks(fontsize = 11)
 plt.yticks(fontsize = 11)
-
-# Ajustando a legenda
 plt.legend(bbox_to_anchor=(1, 1), loc=2, borderpad=1, labelspacing=1.2,fontsize=12)
 ```
 
