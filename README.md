@@ -962,8 +962,7 @@ plt.plot()
 #### Criando uma análise temporal baseada em um conjunto de tempos representados por cada barra.
 
 ##### Interessante verificar que, caso eu aumente/diminua o nº de bins, o gráfico modifica e, assim, sua interpretação também.  
-##### Quando modifico, a barra leva uma média de um conjunto de datas próximas. Assim, se o top1 apresentar alto valor, mas a data vizinha que participa desse conjunto da barra ##### for um valor baixo,   
-##### esse conjunto pode ser menor que conjuntos de datas que não apresentaram tantos outliers. Veja a diferença no próximo plot.  
+##### Quando modifico, a barra leva uma média de um conjunto de datas próximas. Assim, se o top1 apresentar alto valor, mas a data vizinha que participa desse conjunto da barra  for um valor baixo, esse conjunto pode ser menor que conjuntos de datas que não apresentaram tantos outliers. Veja a diferença no próximo plot.  
 ##### Pelo que entendi, essas barras são baseadas em média, medida essa que é influenciada por outliers.
 
 
