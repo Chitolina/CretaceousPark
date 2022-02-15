@@ -7,7 +7,7 @@
 
 <center><img style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://naturalsciences.org/calendar/wp-content/uploads/2020/11/DD-Press-Release-Art-Copyright-FriendsNCMNS_1920x960-1.jpg" width="1200" height="600" ></center>
 
-É de praxe começar importando bibliotecas de frequente uso.
+##### É de praxe começar importando bibliotecas de frequente uso.
 
 
 ```python
@@ -28,7 +28,7 @@ df.head(5)
 ```
 ![jpg](/imagens//1.jpg)
 
-Verificamos algumas informações sobre a tabela.
+##### Verificamos algumas informações sobre a tabela.
 
 
 ```python
@@ -68,8 +68,8 @@ df.info()
     memory usage: 24.3+ KB
     
 
-Podemos verificar o tamanho e algumas informações de nosso dataset.  
-Constitui-se majoritariamente de dados qualitativos, porém temos uma coluna chamada comprimento (length), o que pode indicar ser uma variável quantitativa (numérica).
+##### Podemos verificar o tamanho e algumas informações de nosso dataset.  
+##### * Constitui-se majoritariamente de dados qualitativos, porém temos uma coluna chamada comprimento (length), o que pode indicar ser uma variável quantitativa (numérica).
 
 
 ```python
@@ -124,7 +124,7 @@ df.isna().sum() #alguns dados faltantes, é sempre bom procurar uma maneira de t
 
 
 
-É possível isolar uma variável de interesse e aplicar alguma função em cima dela, como no caso value_counts, para visualizarmos como os dados dessa coluna se agrupam.
+##### É possível isolar uma variável de interesse e aplicar alguma função em cima dela, como no caso value_counts, para visualizarmos como os dados dessa coluna se agrupam.
 
 
 ```python
@@ -144,9 +144,9 @@ print(s)
     herbivorous/omnivorous       1  0.003236   0.3%
     
 
-A partir de agora podemos partir para análise gráfica. Vamos começar com a variável "diet".  
-Na tabela acima percebemos que alguns dados podem não acrescentar valor à análise, como "unkown" e "herbivorous/omnivorous".  
-Como é apenas uma análise exploratória, não há tanto problema em excluir dados desta maneira.
+##### A partir de agora podemos partir para análise gráfica. Vamos começar com a variável "diet".  
+##### Na tabela acima percebemos que alguns dados podem não acrescentar valor à análise, como "unkown" e "herbivorous/omnivorous".  
+##### Como é apenas uma análise exploratória, não há tanto problema em excluir dados desta maneira.
 
 
 ```python
@@ -174,7 +174,7 @@ plt.plot()
     
 
 
-Podemos perceber que "length" é uma variável quantitativa, porém o fato dela conter uma string(m) acompanhando pode ser um empecilho, dependendo do que se deseja trabalhar em cima desta variável.
+##### Podemos perceber que "length" é uma variável quantitativa, porém o fato dela conter uma string(m) acompanhando pode ser um empecilho, dependendo do que se deseja trabalhar em cima desta variável.
 
 
 ```python
@@ -241,9 +241,9 @@ plt.plot()
     
 
 
-Como visto, houve mistura de strings (letras) com int (números).   
-Irei dropar a string "m" de type e depois transformar essa variável para numérica   
-(talvez isto não fosse necessário para essas análises, mas foi interessante para aprender a usar o método de separação).
+##### Como visto, houve mistura de strings (letras) com int (números).   
+##### Irei dropar a string "m" de type e depois transformar essa variável para numérica   
+##### (talvez isto não fosse necessário para essas análises, mas foi interessante para aprender a usar o método de separação).
 
 
 ```python
@@ -272,8 +272,8 @@ df.info()
     memory usage: 34.4+ KB
     
 
-Dropei as colunas taxonomy e link, pois não irei explorá-las.  
-Verifiquei os valores max e min da variável length, assim podemos localizar a linha a qual estão contidas esses valores e verificá-los individualmente.
+##### Dropei as colunas taxonomy e link, pois não irei explorá-las.  
+##### Verifiquei os valores max e min da variável length, assim podemos localizar a linha a qual estão contidas esses valores e verificá-los individualmente.
 
 
 ```python
@@ -307,7 +307,7 @@ print(df.loc[74].to_markdown())
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Confuciusornis_sanctus_fossil.jpg" alt="Ficheiro:Confuciusornis sanctus fossil.jpg – Wikipédia, a enciclopédia livre" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb" data-noaft="1" style="width: 386px; height: 416.006px; margin: 0px;">
 
-#### Já com essa verificação, podemos ver que a subordem Sauropoda é a que apresenta os maiores indivíduos.
+##### Já com essa verificação, podemos ver que a subordem Sauropoda é a que apresenta os maiores indivíduos.
 
 
 ```python
@@ -356,9 +356,9 @@ print(np.sort(df['length'].unique())) #verificando a extensão da diversidade de
        nan]
     
 
-Podemos fazer um agrupamento dos dados quantitativos de comprimento em grupos qualitativos.  
-Resolvi agrupá-los em 5 grupos e depositá-los em uma nova coluna, para facilitar a visualização.   
-A presença de muitos grupos normalmente torna difícil a interpretação e perde seu valor didático.
+##### Podemos fazer um agrupamento dos dados quantitativos de comprimento em grupos qualitativos.  
+##### Resolvi agrupá-los em 5 grupos e depositá-los em uma nova coluna, para facilitar a visualização.   
+##### A presença de muitos grupos normalmente torna difícil a interpretação e perde seu valor didático.
 
 
 ```python
@@ -395,9 +395,9 @@ print(df["porte"])
     Name: porte, Length: 306, dtype: object
     
 
-Se temos dados, temos perguntas, e podemos respondê-las procurando relações entre estes dados.  
-* Será que existe correlação entre tamanho e dieta? E entre tamanho e as diferentes Subordens?   
-* Criarei um gráfico de dispersão para analisar a distribuição dos grupos que acabamos de criar em relação à dieta.  
+##### Se temos dados, temos perguntas, e podemos respondê-las procurando relações entre estes dados.  
+##### * Será que existe correlação entre tamanho e dieta? E entre tamanho e as diferentes Subordens?   
+##### * Criarei um gráfico de dispersão para analisar a distribuição dos grupos que acabamos de criar em relação à dieta.  
 
 
 ```python
@@ -441,11 +441,11 @@ plt.legend(bbox_to_anchor=(1, 1), loc=2, borderpad=1, labelspacing=1.2,fontsize=
     
 
 
-No gráfico acima podemos perceber que há grande diversidade nos grupos de herbívoros, e nestes apresentando a grande maioria de espécies gigantes.  
-Este gráfico nos permite observar a distribuição de uma variável em outra e também a densidade de determinado valor.  
-Os pontos mais escuros normalmente expressam maior densidade nessa área; em um dataset maior a densidade tende a tornar-se mais visível.
+##### No gráfico acima podemos perceber que há grande diversidade nos grupos de herbívoros, e nestes apresentando a grande maioria de espécies gigantes.  
+##### Este gráfico nos permite observar a distribuição de uma variável em outra e também a densidade de determinado valor.  
+##### Os pontos mais escuros normalmente expressam maior densidade nessa área; em um dataset maior a densidade tende a tornar-se mais visível.
 
-Podemos tentar analisar qual o padrão de tamanho em relação às Subordens.
+##### Podemos tentar analisar qual o padrão de tamanho em relação às Subordens.
 
 
 ```python
@@ -494,7 +494,7 @@ plt.legend(bbox_to_anchor=(1, 1), loc=2, borderpad=1, labelspacing=1.2,fontsize=
 
 <img style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://upload.wikimedia.org/wikipedia/commons/d/d3/The_dinosaur_book_-_the_ruling_reptiles_and_their_relatives_%281945%29_%2820946946632%29.jpg" width="455" height="600">
 
-#### Um histograma apontando a relação das subordem com a dieta também pode ser interessante visualizar.
+##### Um histograma apontando a relação das subordem com a dieta também pode ser interessante visualizar.
 
 
 ```python
@@ -550,7 +550,7 @@ print(df['length'].describe())
     Name: length, dtype: float64
     
 
-Em relação à subordem, quais estão mais presentes no estudo?
+##### Em relação à subordem, quais estão mais presentes no estudo?
 
 
 ```python
@@ -612,11 +612,11 @@ display(count)
 
 
 ```python
-# Podemos procurar por alguma espécie de interesse para sabermos algumas informações
+##### Podemos procurar por alguma espécie de interesse para sabermos algumas informações
 
 df[df['species'].str.contains("rex")==True]
 
-# Parece que rex (rei) não é um subnome aplicado a somente uma espécie. 🦎  🦖
+##### Parece que rex (rei) não é um subnome aplicado a somente uma espécie. 🦎  🦖
 ```
 ![jpg](/imagens/2.jpg)
 
@@ -634,8 +634,8 @@ df[df['name'].str.contains("tyrannosaurus")==True]
 
 
 
-Analisando a procedência:
-* Será que existiram mais dinossauros em uma região, ou será que aquela região faz mais pesquisas sobre esse nicho?
+##### Analisando a procedência:
+##### * Será que existiram mais dinossauros em uma região, ou será que aquela região faz mais pesquisas sobre esse nicho?
 
 
 ```python
@@ -692,7 +692,7 @@ plt.plot()
     
 
 
-Análise dos períodos da "Era dos Dinossauros".
+##### Análise dos períodos da "Era dos Dinossauros".
 
 
 ```python
@@ -729,8 +729,8 @@ plt.plot()
     
 
 
-Temos muitos períodos similares que divergem em relação a "alguns" milhões de anos (e.g. Early Cretaceous 121-99 million years ago - Early Cretaceous 127-121 million years ago).   
-Talvez possamos agrupar alguns espaços de tempo para facilitar a análise.
+##### Temos muitos períodos similares que divergem em relação a "alguns" milhões de anos (e.g. Early Cretaceous 121-99 million years ago - Early Cretaceous 127-121 million years ago).   
+##### * Talvez possamos agrupar alguns espaços de tempo para facilitar a análise.
 
 
 ```python
@@ -790,7 +790,7 @@ plt.plot()
 
 <img class="js-lazy image-loaded" src="https://pro2-bar-s3-cdn-cf6.myportfolio.com/87567dd6e258a08aabf2d11940ab6a6a/afcaba50-3e96-486d-ba64-f484bbc9e40d_rw_1920.jpg?h=01451284020b6127350a7c0611e1a4ac" width="1920" srcset="https://pro2-bar-s3-cdn-cf6.myportfolio.com/87567dd6e258a08aabf2d11940ab6a6a/afcaba50-3e96-486d-ba64-f484bbc9e40d_rw_600.jpg?h=8c28f3c4e45ab62c5306b2188cb16586 600w,https://pro2-bar-s3-cdn-cf6.myportfolio.com/87567dd6e258a08aabf2d11940ab6a6a/afcaba50-3e96-486d-ba64-f484bbc9e40d_rw_1200.jpg?h=2acfa69062c61454c1f422047558544e 1200w,https://pro2-bar-s3-cdn-cf6.myportfolio.com/87567dd6e258a08aabf2d11940ab6a6a/afcaba50-3e96-486d-ba64-f484bbc9e40d_rw_1920.jpg?h=01451284020b6127350a7c0611e1a4ac 1920w," sizes="(max-width: 1920px) 100vw, 1300px">
 
-Irei dropar a linha com USA. Poderia ter utilizado uma alternativa melhor para tratamento, e assim não perder aquele dado por causa de um erro, mas foi a medida mais rápida para a plotagem.
+##### Irei dropar a linha com USA. Poderia ter utilizado uma alternativa melhor para tratamento, e assim não perder aquele dado por causa de um erro, mas foi a medida mais rápida para a plotagem.
 
 
 ```python
@@ -798,8 +798,8 @@ df.drop(df[df['periodo_grupos'] == "USA"].index, inplace = True)
 ```
 
 ##### Criando um gráfico mais elaborado na visualização dos períodos
-* Podemos ver que o Cretáceo foi a era de ouro dos dinossauros, diferente do que se acredita, baseado nos filmes.
-* É possível pensar que essa maior quantidade também seja em razão de melhores condições de preservação dos fósseis e outros determinantes.
+##### * Podemos ver que o Cretáceo foi a era de ouro dos dinossauros, diferente do que se acredita, baseado nos filmes.
+##### * É possível pensar que essa maior quantidade também seja em razão de melhores condições de preservação dos fósseis e outros determinantes.
 
 
 ```python
@@ -846,8 +846,8 @@ plt.legend(prop={'size': 13})
     
 
 
-#### Por último, também podemos explorar os pesquisadores (named_by) mais ativos na área.
-* Farei a mesma limpeza de string separando o nome da data.
+##### Por último, também podemos explorar os pesquisadores (named_by) mais ativos na área.
+##### * Farei a mesma limpeza de string separando o nome da data.
 
 
 ```python
@@ -894,7 +894,7 @@ df.head(2)
 ![jpg](/imagens/6.jpg)
 
 
-Quais autores fizeram mais descobertas?
+##### Quais autores fizeram mais descobertas?
 
 
 ```python
@@ -941,7 +941,7 @@ count.dtype
 
 
 
-Podemos verificar os anos de maiores descobertas.
+##### Podemos verificar os anos de maiores descobertas.
 
 
 ```python
@@ -959,10 +959,10 @@ plt.plot()
 
 #### Criando uma análise temporal baseada em um conjunto de tempos representados por cada barra.
 
-Interessante verificar que, caso eu aumente/diminua o nº de bins, o gráfico modifica e, assim, sua interpretação também.  
-Quando modifico, a barra leva uma média de um conjunto de datas próximas. Assim, se o top1 apresentar alto valor, mas a data vizinha que participa desse conjunto da barra for um valor baixo,   
-esse conjunto pode ser menor que conjuntos de datas que não apresentaram tantos outliers. Veja a diferença no próximo plot.  
-Pelo que entendi, essas barras são baseadas em média, medida essa que é influenciada por outliers.
+##### Interessante verificar que, caso eu aumente/diminua o nº de bins, o gráfico modifica e, assim, sua interpretação também.  
+##### Quando modifico, a barra leva uma média de um conjunto de datas próximas. Assim, se o top1 apresentar alto valor, mas a data vizinha que participa desse conjunto da barra ##### for um valor baixo,   
+##### esse conjunto pode ser menor que conjuntos de datas que não apresentaram tantos outliers. Veja a diferença no próximo plot.  
+##### Pelo que entendi, essas barras são baseadas em média, medida essa que é influenciada por outliers.
 
 
 ```python
@@ -996,8 +996,8 @@ plt.plot()
     
 
 
-Podemos criar um dicionário unindo duas colunas, ele apresentará uma "chave" e seu "valor", representados pelas duas variáveis de escolha.  
-Isto é interessante para isolar áreas de interesse e, dependendo da análise, pode facilitar a implementação da metodologia aplicada.
+##### Podemos criar um dicionário unindo duas colunas, ele apresentará uma "chave" e seu "valor", representados pelas duas variáveis de escolha.  
+##### Isto é interessante para isolar áreas de interesse e, dependendo da análise, pode facilitar a implementação da metodologia aplicada.
 
 
 ```python
@@ -1223,7 +1223,7 @@ print(area_dict.get("Marsh ")) #trará seu valor
     1889
     
 
-Outra possibilidade é transformar nossos dados em conjuntos "arrays". Normalmente se faz isso na hora de organizar nossos dados para implementar algum modelo preditivo.  
+##### Outra possibilidade é transformar nossos dados em conjuntos "arrays". Normalmente se faz isso na hora de organizar nossos dados para implementar algum modelo preditivo.  
 
 
 ```python
@@ -1256,15 +1256,15 @@ print(arr)
      2007 2007 2007 2007 2010]
     
 
-E assim termina essa análise. Um pequeno dataset nos possibilitou uma boa quantidade de insights, porém dizer que o conjunto foi totalmente explorado não seria verdade.
-Dentre outras análises, poderiam ser explorados de forma mais profunda:
-* A relação das espécies a cada período;
-* Um chart de mapas, caso se utilizasse dados de long. e lat.;
-* Relação de cada autor com sua espécie descrita;
-* dentre outros.
+##### E assim termina essa análise. Um pequeno dataset nos possibilitou uma boa quantidade de insights, porém dizer que o conjunto foi totalmente explorado não seria verdade.
+##### Dentre outras análises, poderiam ser explorados de forma mais profunda:
+##### * A relação das espécies a cada período;
+##### * Um chart de mapas, caso se utilizasse dados de long. e lat.;
+##### * Relação de cada autor com sua espécie descrita;
+##### * dentre outros.
 
-Este projeto certamente ampliou minha capacidade exploratória e meu conhecimento sobre o conteúdo analisado, e espero assim também gerar valor para quem tenha lido.   
-        Até breve ;)
+##### Este projeto certamente ampliou minha capacidade exploratória e meu conhecimento sobre o conteúdo analisado, e espero assim também gerar valor para quem tenha lido.   
+##### Até breve ;)
 
 <center><img alt="Close call." src="https://64.media.tumblr.com/ba2cdc15905b15d56b8874c37224918c/tumblr_nx3px96F5A1rwfctbo5_500.gifv" width="500" height="205" data-highres="https://64.media.tumblr.com/ba2cdc15905b15d56b8874c37224918c/tumblr_nx3px96F5A1rwfctbo5_640.gifv" data-width="600" data-height="246" class=""><center>
 
