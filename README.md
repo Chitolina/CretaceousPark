@@ -72,7 +72,7 @@ df.info()
 ##### * Constitui-se majoritariamente de dados qualitativos, porém temos uma coluna chamada comprimento (length), o que pode indicar ser uma variável quantitativa (numérica).
 
 
-```python
+```ruby
 nRow, nCol = df.shape
 print(f'Temos {nRow} linhas e  {nCol} colunas')
 print('\n')
@@ -149,7 +149,7 @@ print(s)
 ##### Como é apenas uma análise exploratória, não há tanto problema em excluir dados desta maneira.
 
 
-```python
+```ruby
 df.drop(df[df['diet'] == "unknown"].index, inplace = True)  #dropando variáveis sem significância
 df.drop(df[df['diet'] == "herbivorous/omnivorous"].index, inplace = True)
 
