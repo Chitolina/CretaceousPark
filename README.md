@@ -5,7 +5,9 @@
 
 ##### O pequeno projeto aprimorou minhas skills na manipulação de dados e ampliou minha capacidade de gerar análises visualmente interessantes. O interessante da análise com Python é que, diferente de outras ferramentas, como Excel/Bi/Tableau, você tem uma maior versatilidade na hora de manipular/separar/excluir dados, além do potencial de análises preditivas, o que faz com que o conhecimento da linguagem torne-se muito positivo para quem gosta de trabalhar analisando dados.
 
-<center><img style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://naturalsciences.org/calendar/wp-content/uploads/2020/11/DD-Press-Release-Art-Copyright-FriendsNCMNS_1920x960-1.jpg" width="800" height="400" ></center>
+<p align="center">
+    <img style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://naturalsciences.org/calendar/wp-content/uploads/2020/11/DD-Press-Release-Art-Copyright-FriendsNCMNS_1920x960-1.jpg" width="800" height="400" ></center>
+</p>
 
 ##### É de praxe começar importando bibliotecas de frequente uso.
 
