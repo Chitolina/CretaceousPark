@@ -152,7 +152,7 @@ print(s)
 
 
 ```ruby
-df.drop(df[df['diet'] == "unknown"].index, inplace = True)  #dropando variáveis sem significância
+df.drop(df[df['diet'] == "unknown"].index, inplace = True)  #dropando dados sem significância
 df.drop(df[df['diet'] == "herbivorous/omnivorous"].index, inplace = True)
 
 df['diet'].value_counts() #contando os conjuntos dentro dessa variável
@@ -176,7 +176,7 @@ plt.plot()
     
 
 
-##### Podemos perceber que "length" é uma variável quantitativa, porém o fato dela conter uma string(m) acompanhando pode ser um empecilho, dependendo do que se deseja trabalhar em cima desta variável.
+##### Podemos perceber que "length" é uma variável quantitativa, porém o fato dela conter uma string(m) pode ser um empecilho, dependendo do que se deseja trabalhar em cima desta variável.
 
 
 ```python
@@ -243,8 +243,8 @@ plt.plot()
     
 
 
-##### Como visto, houve mistura de strings (letras) com int (números).   
-##### Irei dropar a string "m" de type e depois transformar essa variável para numérica   
+##### Como visto, houve mistura de strings (letras) com números.   
+##### Irei dropar a string "m" de type e depois transformar essa variável para numérica.     
 ##### (talvez isto não fosse necessário para essas análises, mas foi interessante para aprender a usar o método de separação).
 
 
@@ -274,8 +274,8 @@ df.info()
     memory usage: 34.4+ KB
     
 
-##### Dropei as colunas taxonomy e link, pois não irei explorá-las.  
-##### Verifiquei os valores max e min da variável length, assim podemos localizar a linha a qual estão contidas esses valores e verificá-los individualmente.
+##### Dropei as colunas taxonomy e link, pois não irei explorá-las (a taxonomy até poderia ser explorada com um regex).    
+##### Verifiquei os valores max e min da variável length, assim podemos localizar a linha a qual estão contidas esses valores e verificá-los individualmente.  
 
 
 ```python
